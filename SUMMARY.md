@@ -37,4 +37,6 @@
     * [Delete](objects/delete.md)
     * [Enumeration](objects/enumeration.md)
     * [Global footprint](objects/global_footprint.md)
+* [Exercises](exercises/README.md)
+    * [All Exercises](exercises/all_exercises.md)
 
