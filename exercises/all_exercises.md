@@ -1,17 +1,14 @@
 # All Exercises
 
-<!-- Exercise 1 -->
+
+<!-- Exercise -->
 {% exercise %}
-Substration of 2 numbers
+Substration of 2 numbers<br>
+- <u>Input</u>: 2 numbers (ex: <code>42</code> and <code>38</code>) <br>
+- <u>Output</u>: The difference (ex: <code>4</code>)
 
 {% initial %}
-// Exercise 1: Substration of 2 numbers
 function subs(a, b) {
-
-
-
-
-
 } 
 
 {% solution %}
@@ -20,17 +17,47 @@ function subs(a, b) {
 } 
 
 {% validation %}
-assert(subs(42, 38) === 4, "Testing subs(42, 38)");
-assert(subs(38, 42) === -4, "Testing subs(38, 42)");
-assert(subs(100,100) === 0, "Testing subs(100,100)");
+assert(subs(42, 38) === 4, "Fail for subs(42, 38)");
+assert(subs(38, 42) === -4, "Fail for subs(38, 42)");
+assert(subs(100,100) === 0, "Fail for subs(100,100)");
 
 {% endexercise %}
 
 
 
-<!-- Exercise 2 -->
+<!-- Exercise -->
 {% exercise %}
-Find the maximum of 2 numbers
+Even or Odd number?<br>
+- <u>Input</u>: A number (ex: <code>42</code>) <br>
+- <u>Output</u>: A string that is either "Even" or "Odd" (ex: <code>"Even"</code>)
+
+{% initial %}
+function evenOrOdd(n) {
+} 
+
+{% solution %}
+function evenOrOdd(n) {
+    if (n % 2 === 0) {
+        return "Even";
+    }
+    else {
+        return "Odd";
+    }
+} 
+
+{% validation %}
+assert(evenOrOdd(42) === "Even", "Fail for evenOrOdd(42)");
+assert(evenOrOdd(1) === "Odd", "Fail for evenOrOdd(1)");
+
+{% endexercise %}
+
+
+
+<!-- Exercise -->
+{% exercise %}
+Find the maximum of 2 numbers <br>
+- <u>Input</u>: 2 numbers (ex: <code>42</code> and <code>38</code>) <br>
+- <u>Output</u>: The biggest number (ex: <code>42</code>)
 
 {% initial %}
 function maxOfTwoNumbers(a, b) {
@@ -47,23 +74,25 @@ function maxOfTwoNumbers(a, b) {
 } 
 
 {% validation %}
-assert(maxOfTwoNumbers(42, 38) === 42, "Testing maxOfTwoNumbers(42, 38)");
-assert(maxOfTwoNumbers(38, 42) === 42, "Testing maxOfTwoNumbers(38, 42)");
-assert(maxOfTwoNumbers(100,100) === 100, "Testing maxOfTwoNumbers(100,100)");
+assert(maxOfTwoNumbers(42, 38) === 42, "Fail for maxOfTwoNumbers(42, 38)");
+assert(maxOfTwoNumbers(38, 42) === 42, "Fail for maxOfTwoNumbers(38, 42)");
+assert(maxOfTwoNumbers(100,100) === 100, "Fail for maxOfTwoNumbers(100,100)");
 
 {% endexercise %}
 
 
-<!-- Exercise 2.1 -->
+<!-- Exercise -->
 {% exercise %}
-Find the maximum of 3 numbers
+Find the maximum of 3 numbers <br>
+- <u>Input</u>: 3 numbers (ex: <code>42</code>, <code>38</code> and <code>12</code>) <br>
+- <u>Output</u>: The biggest number (ex: <code>42</code>)
 
 {% initial %}
-function maxOfThreeNumbers(a, b) {
+function maxOfThreeNumbers(a, b, c) {
 }  
 
 {% solution %}
-function maxOfThreeNumbers(a, b) {
+function maxOfThreeNumbers(a, b, c) {
     if (a > b && a > c) {
         return a;
     }
@@ -76,15 +105,45 @@ function maxOfThreeNumbers(a, b) {
 } 
 
 {% validation %}
-assert(maxOfThreeNumbers(42, 38, 12) === 42, "Testing maxOfThreeNumbers(42, 38, 12)");
-assert(maxOfThreeNumbers(38, 42, 12) === 42, "Testing maxOfThreeNumbers(38, 42, 12)");
-assert(maxOfThreeNumbers(12, 38, 42) === 42, "Testing maxOfThreeNumbers(12, 38, 42)");
+assert(maxOfThreeNumbers(42, 38, 12) === 42, "Fail for maxOfThreeNumbers(42, 38, 12)");
+assert(maxOfThreeNumbers(38, 42, 12) === 42, "Fail for maxOfThreeNumbers(38, 42, 12)");
+assert(maxOfThreeNumbers(12, 38, 42) === 42, "Fail for maxOfThreeNumbers(12, 38, 42)");
 
 {% endexercise %}
 
-<!-- Exercise 3 -->
+
+<!-- Exercise  -->
 {% exercise %}
-Find the maximum of a non-empty array
+Calculate the sum of all elements<br>
+<u>Input</u>: Array of number (ex: <code>[2, 10, 30]</code>) <br>
+<u>Output</u>: The sum (ex: <code>42</code>)
+
+{% initial %}
+function sumArray(array) {
+}
+
+{% solution %}
+function sumArray(array) {
+    var curSum = 0;
+    for (var i = 0; i < array; i++) {
+        curSum += array[i];
+    }
+    return curSum;
+}
+
+{% validation %}
+assert(sumArray([2, 10, 30]) === 42, "Fail for sumArray([2, 10, 30])");
+assert(sumArray([8]) === 8, "Fail for sumArray([8])");
+
+{% endexercise %}
+
+
+
+<!-- Exercise -->
+{% exercise %}
+Find the maximum of a non-empty array <br>
+- <u>Input</u>: Array of numbers (ex: <code>[ 3, 5, 42, 12, 38 ]</code> ) <br>
+- <u>Output</u>: The biggest number (ex: <code>42</code> )
 
 {% initial %}
 function maxOfArray(numbers) {
@@ -105,257 +164,175 @@ function maxOfArray(numbers) {
 }
 
 {% validation %}
-assert(maxOfArray([42, 38, 12]) === 42, "Testing maxOfArray([42, 38, 12])");
-assert(maxOfArray([38, 42, 12]) === 42, "Testing maxOfArray([38, 42, 12])");
-assert(maxOfArray([12, 38, 42]) === 42, "Testing maxOfArray([12, 38, 42])");
+assert(maxOfArray([42, 38, 12]) === 42, "Fail for maxOfArray([42, 38, 12])");
+assert(maxOfArray([38, 42, 12]) === 42, "Fail for maxOfArray([38, 42, 12])");
+assert(maxOfArray([12, 38, 42]) === 42, "Fail for maxOfArray([12, 38, 42])");
 
 {% endexercise %}
 
 
-<!-- Exercise  -->
+
+
+<!-- Exercise -->
 {% exercise %}
+Find the longest word <br>
+- <u>Input</u>: Array of strings (ex: <code>[ "car", "plane", "bike"]</code>) <br>
+- <u>Output</u>: The longest string (ex: <code>"plane"</code>)
 
 {% initial %}
-
-
-{% solution %}
-
-
-{% validation %}
-assert(maxOfThreeNumbers(42, 38, 12) === 42, "Testing maxOfThreeNumbers(42, 38, 12)");
-assert(maxOfThreeNumbers(38, 42, 12) === 42, "Testing maxOfThreeNumbers(38, 42, 12)");
-assert(maxOfThreeNumbers(12, 38, 42) === 42, "Testing maxOfThreeNumbers(12, 38, 42)");
-
-{% endexercise %}
-
-
-
-<!-- Exercise  -->
-{% exercise %}
-
-{% initial %}
-
-
-{% solution %}
-
-
-{% validation %}
-assert(maxOfThreeNumbers(42, 38, 12) === 42, "Testing maxOfThreeNumbers(42, 38, 12)");
-assert(maxOfThreeNumbers(38, 42, 12) === 42, "Testing maxOfThreeNumbers(38, 42, 12)");
-assert(maxOfThreeNumbers(12, 38, 42) === 42, "Testing maxOfThreeNumbers(12, 38, 42)");
-
-{% endexercise %}
-
-
-
-<!-- Exercise  -->
-{% exercise %}
-
-{% initial %}
-
-
-{% solution %}
-
-
-{% validation %}
-assert(maxOfThreeNumbers(42, 38, 12) === 42, "Testing maxOfThreeNumbers(42, 38, 12)");
-assert(maxOfThreeNumbers(38, 42, 12) === 42, "Testing maxOfThreeNumbers(38, 42, 12)");
-assert(maxOfThreeNumbers(12, 38, 42) === 42, "Testing maxOfThreeNumbers(12, 38, 42)");
-
-{% endexercise %}
-
-
-
-<!-- Exercise  -->
-{% exercise %}
-
-{% initial %}
-
-
-{% solution %}
-
-
-{% validation %}
-assert(maxOfThreeNumbers(42, 38, 12) === 42, "Testing maxOfThreeNumbers(42, 38, 12)");
-assert(maxOfThreeNumbers(38, 42, 12) === 42, "Testing maxOfThreeNumbers(38, 42, 12)");
-assert(maxOfThreeNumbers(12, 38, 42) === 42, "Testing maxOfThreeNumbers(12, 38, 42)");
-
-{% endexercise %}
-
-
-
-<!-- Exercise  -->
-{% exercise %}
-
-{% initial %}
-
-
-{% solution %}
-
-
-{% validation %}
-assert(maxOfThreeNumbers(42, 38, 12) === 42, "Testing maxOfThreeNumbers(42, 38, 12)");
-assert(maxOfThreeNumbers(38, 42, 12) === 42, "Testing maxOfThreeNumbers(38, 42, 12)");
-assert(maxOfThreeNumbers(12, 38, 42) === 42, "Testing maxOfThreeNumbers(12, 38, 42)");
-
-{% endexercise %}
-
-
-```javascript
-// Try to solve has many exercises as possible
-// You can go to https://repl.it/languages/javascript to test your code
-// Send your code the person that sent you the challenge, for example by saving the code in Repl.it and sharing the link
-
-// To help solving it, you can find  
-
-// Good luck ;)
-
-// Exercise 0 (Example): Function that returns the sum of 2 numbers
-function sum(a, b) {
-  var result = a + b;
-  return result;
-} 
-console.log("> Exercice 0 --- Should display 42");
-console.log(sum(20, 22));
-
-
-// Exercise 1: Substration of 2 numbers
-function subs(a, b) {
-} 
-console.log("\n> Exercice 1 --- Should display 4");
-console.log(subs(42, 38));
-
-
-// Exercise 2: Find the maximum
-function maxOfTwoNumbers(a, b) {
-} 
-console.log("\n> Exercice 2 --- Should display 6");
-console.log(maxOfTwoNumbers(2, 6));
-
-
-// Exercise 3: Find the longest word
-// Hint: you can use a variable "currentMax". In the example, its value would be: 0, 3, 5, 42, 42, 42
-function maxOfArray(numbers) {
-}
-console.log("\n> Exercice 3 --- Should display 42");
-console.log(maxOfArray([ 3, 5, 42, 12, 38 ]));
-
-
-// Exercise 4: Find the longest word
 function findLongestWord (words) {
 }
-var words = [
-  "mystery",
-  "brother",
-  "aviator",
-  "crocodile",
-  "pearl",
-  "orchard",
-  "crackpot"
-];
-console.log("\n> Exercice 4 --- Should display 'crocodile'");
-console.log(findLongestWord(words));
 
-
-// Exercise 5: Calculate the sum of all elements
-function sumArray (array) {
+{% solution %}
+function findLongestWord (words) {
+    var currentMax = "";
+    for (var i = 0; i < words.length; i++) {
+        if (currentMax.length < words[i].length) {
+            currentMax = words[i];
+        }
+    }
+    return currentMax;
 }
-console.log("\n> Exercice 5 --- Should display 20");
-console.log(sumArray([6, 3, 1, 10]));
 
-// Exercise 6: Calculate the average of all elements
-function averageNumbers (array) {
+
+{% validation %}
+assert(findLongestWord([ "car", "plane", "bike"]) === "plane", 'Fail for findLongestWord([ "car", "plane", "bike"])');
+assert(findLongestWord([ "mystery", "brother", "aviator", "crocodile", "pearl", "orchard", "crackpot"]) === "crocodile", 'Fail for findLongestWord([ "mystery", "brother", "aviator", "crocodile", "pearl", "orchard", "crackpot"])');
+
+{% endexercise %}
+
+
+
+
+
+
+
+<!-- Exercise  -->
+{% exercise %}
+Finding a word inside an array<br>
+- <u>Input</u>: Array of strings and a string (ex: <code>["Madrid", "Barcelona", "Miami"]</code> and <code>"Paris"</code>) <br>
+- <u>Output</u>: A boolean that is true when the word is in the array (ex: <code>false</code>)
+
+{% initial %}
+function doesWordExist(wordsArray, word) {
 }
-console.log("\n> Exercice 6 --- Should display 5");
-console.log(averageNumbers([6, 3, 1, 10]));
 
-
-// Exercise 7: Calculate the average length of all elements
-function averageWordLength (array) {
+{% solution %}
+function doesWordExist(wordsArray, word) {
+    for (var i = 0; i < wordsArray.length; i++) {
+        if (wordsArray[i] === word) {
+            return true;
+        }
+    }
+    return false;
 }
-var words = [
-  "seat",
-  "correspond",
-  "linen",
-  "motif",
-  "hole",
-  "smell",
-  "smart",
-  "chaos",
-  "fuel",
-  "palace"
-];
-console.log("\n> Exercice 7 --- Should display 5.3");
-console.log(averageWordLength(words));
+
+{% validation %}
+assert(doesWordExist(["Madrid", "Barcelona", "Miami"], "Paris") === false, 'Fail for doesWordExist(["Madrid", "Barcelona", "Miami"], "Paris")');
+assert(doesWordExist(["Madrid", "Barcelona", "Miami"], "Madrid") === true, 'Fail for doesWordExist(["Madrid", "Barcelona", "Miami"], "Madrid")');
+
+{% endexercise %}
 
 
-// Exercise 8: Finding a string inside an array
-function doesWordExist (wordsArray, word) {
+
+<!-- Exercise  -->
+{% exercise %}
+Get the fullname<br>
+- <u>Input</u>: An object with at least 2 string properties "firstname" and "lastaname" (ex: <code>{firstname: "John", lastname: "Doe"}</code>) <br>
+- <u>Output</u>: A string the represents the fullname (dont' forget the space in the middle) (ex: <code>John Doe</code>)
+
+{% initial %}
+function getFullname(person) {
 }
-var words = [
-  "machine",
-  "subset",
-  "trouble",
-  "starting",
-  "matter",
-  "eating",
-  "truth",
-  "disobedience"
-];
-console.log("\n> Exercice 8 --- Should display true, false");
-console.log(doesWordExist(words, "matter"));
-console.log(doesWordExist(words, "dog"));
 
-
-// Exercise 9: Counting Repetion
-function howManyTimes (words, word) {
+{% solution %}
+function getFullname(person) {
+    return person.firstname + ' ' + person.lastname;
 }
-var words = [
-  "machine",
-  "matter",
-  "subset",
-  "trouble",
-  "starting",
-  "matter",
-  "eating",
-  "matter",
-  "truth",
-  "disobedience",
-  "matter"
-];
-console.log("\n> Exercice 9 --- Should display 4, 0");
-console.log(howManyTimes(words, "matter"));
-console.log(howManyTimes(words, "dog"));
+
+{% validation %}
+assert(getFullname({firstname: 'John', lastname: 'Doe'}) === 'John Doe', "Fail for getFullname({firstname: 'John', lastname: 'Doe'})");
+assert(getFullname({firstname: 'A', lastname: 'B'}) === 'A B', "Fail for getFullname({firstname: 'A', lastname: 'B'})");
+
+{% endexercise %}
 
 
-// Exercise 10 (bonus): find the greatest product, on a row or a on column
-// In the following example, the greatest product is on the second column (3 and 4) and its value is 12 (3*4). 
-//   [  [1,3]
-//      [2,4]  ]
-function greatestProduct (matrix) {
+
+
+<!-- Exercise -->
+{% exercise %}
+Find the maximum of a two dimensional array <br>
+- <u>Input</u>: Array of array of numbers (ex: <code>[ [1,6], [3,8], [5,6] ]</code> ) <br>
+- <u>Output</u>: The maximum of everything (ex: <code>8</code> )
+
+{% initial %}
+function maxTwoDimArray(matrix) {
 }
-var matrix = [
-  [08,02,22,97,38,15,0,40,0,75,04,05,07,78,52,12,50,77,91,08],
-  [49,49,99,40,17,81,18,57,60,87,17,40,98,43,69,48,04,56,62,0],
-  [81,49,31,73,55,79,14,29,93,71,40,67,53,88,30,03,49,13,36,65],
-  [52,70,95,23,04,60,11,42,69,24,68,56,01,32,56,71,37,02,36,91],
-  [22,31,16,71,51,67,63,89,41,92,36,54,22,40,40,28,66,33,13,80],
-  [24,47,32,60,99,03,45,02,44,75,33,53,78,36,84,20,35,17,12,50],
-  [32,98,81,28,64,23,67,10,26,38,40,67,59,54,70,66,18,38,64,70],
-  [67,26,20,68,02,62,12,20,95,63,94,39,63,08,40,91,66,49,94,21],
-  [24,55,58,05,66,73,99,26,97,17,78,78,96,83,14,88,34,89,63,72],
-  [21,36,23,09,75,0,76,44,20,45,35,14,0,61,33,97,34,31,33,95],
-  [78,17,53,28,22,75,31,67,15,94,03,80,04,62,16,14,09,53,56,92],
-  [16,39,05,42,96,35,31,47,55,58,88,24,0,17,54,24,36,29,85,57],
-  [86,56,0,48,35,71,89,07,05,44,44,37,44,60,21,58,51,54,17,58],
-  [19,80,81,68,05,94,47,69,28,73,92,13,86,52,17,77,04,89,55,40],
-  [04,52,08,83,97,35,99,16,07,97,57,32,16,26,26,79,33,27,98,66],
-  [88,36,68,87,57,62,20,72,03,46,33,67,46,55,12,32,63,93,53,69],
-  [04,42,16,73,38,25,39,11,24,94,72,18,08,46,29,32,40,62,76,36],
-  [20,69,36,41,72,30,23,88,34,62,99,69,82,67,59,85,74,04,36,16],
-  [20,73,35,29,78,31,90,01,74,31,49,71,48,86,81,16,23,57,05,54],
-  [01,70,54,71,83,51,54,69,16,92,33,48,61,43,52,01,89,19,67,48],
-];
-console.log("\n> Exercice 10 (bonus)");
-console.log(greatestProduct(matrix));
-```
+
+{% solution %}
+function maxTwoDimArray(matrix) {
+    var currentMax = 0;
+    for (var row = 0; row < matrix.length; row++) {
+        for (var col = 0; col < matrix[row].length; col++) {
+            if (currentMax < matrix[row][col]) {
+                currentMax = matrix[row][col];
+            }
+        }
+    }
+    return currentMax;
+}
+
+{% validation %}
+assert(maxTwoDimArray([[42]]) === 42, "Fail for maxTwoDimArray([[42]])");
+assert(maxTwoDimArray([ [1,6], [3,8], [5,6] ]) === 8, "Fail for maxTwoDimArray([ [1,6], [3,8], [5,6] ])");
+
+{% endexercise %}
+
+
+
+
+
+<!-- Exercise  -->
+{% exercise %}
+Build a triangle<br>
+- <u>Input</u>: A number "n" (ex: <code>2</code>) <br>
+- <u>Output</u>: An array of length "n", that contains an array of "*" with a size incrementing by one each time  (ex: <code>[ ["*"],["*","*"] ]</code>)<br>
+Example output for 4:<br>
+<code style="white-space: pre;">[
+    ["*"],
+    ["*","*"],
+    ["*","*","*"],
+    ["*","*","*","*"],
+]</code>
+
+{% initial %}
+function buildTriangle(n) {
+}
+
+{% solution %}
+function buildTriangle(n) {
+  var res = [];
+  for (var row = 0; row < n; row++) {
+      res.push([]);
+      for (var col = 0; col < row+1; col++) {
+          res[row].push("*");
+      }
+  }
+  return res;
+}
+
+{% validation %}
+assert(buildTriangle(1).length === 1, "Fail for buildTriangle(1)");
+assert(buildTriangle(5).length === 5, "Fail for buildTriangle(5)");
+assert(buildTriangle(5) && buildTriangle(5)[3].length === 4, "Fail for buildTriangle(5)");
+assert(buildTriangle(5) && buildTriangle(5)[3][3] === "*", "Fail for buildTriangle(5)");
+
+{% endexercise %}
+
+
+
+
+
+
+
+

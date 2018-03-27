@@ -1,4 +1,4 @@
-# Higher Order Functions
+# Higher Order (Advanced)
 
 Higher order functions are functions that manipulate other functions.
 For example, a function can take other functions as arguments and/or produce a function as its return value.
