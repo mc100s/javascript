@@ -1,6 +1,6 @@
 # All Exercises
 
-
+<!-- Exercise 1 -->
 {% exercise %}
 Substration of 2 numbers
 
@@ -15,43 +15,67 @@ function subs(a, b) {
 } 
 
 {% validation %}
-assert(subs(42, 38) === 4);
-assert(subs(38, 42) === -4);
-assert(subs(100,100) === 0);
+assert(subs(42, 38) === 4, "Testing subs(42, 38)");
+assert(subs(38, 42) === -4, "Testing subs(38, 42)");
+assert(subs(100,100) === 0, "Testing subs(100,100)");
+
+{% endexercise %}
+
+<!-- Exercise 2 -->
+{% exercise %}
+Substration of 2 numbers
+
+{% initial %}
+function subs(a, b) {
+
+
+
+
+    
+} 
+
+{% solution %}
+function subs(a, b) {
+    return a - b;
+} 
+
+{% validation %}
+assert(subs(42, 38) === 4, "Testing subs(42, 38)");
+assert(subs(38, 42) === -4, "Testing subs(38, 42)");
+assert(subs(100,100) === 0, "Testing subs(100,100)");
 
 {% endexercise %}
 
 
 
+<!-- Exercise 2 -->
 {% exercise %}
-Define a function named `negate` that takes `add1` as argument and returns a function, that returns the negation of the value returned by `add1`. (Things get a bit more complicated ;) )
+Find the maximum
+
 {% initial %}
-var add1 = function (x) {
-    return x + 1;
-};
+function maxOfTwoNumbers(a, b) {
 
-var negate = function(func) {
-    // TODO
-};
 
-// Should return -6
-// Because (5+1) * -1 = -6
-negate(add1)(5);
+
+
+  
+}  
 
 {% solution %}
-var add1 = function (x) {
-    return x + 1;
-}
-
-var negate = function(func) {
-    return function(x) {
-        return -1 * func(x);
+function maxOfTwoNumbers(a, b) {
+    if (a > b) {
+        return a;
     }
-}
+    else {
+        return b;
+    }
+} 
 
-negate(add1)(5);
 {% validation %}
-assert(negate(add1)(5) === -6);
+assert(maxOfTwoNumbers(42, 38) === 42, "Testing maxOfTwoNumbers(42, 38)");
+assert(maxOfTwoNumbers(38, 42) === 42, "Testing maxOfTwoNumbers(38, 42)");
+assert(maxOfTwoNumbers(100,100) === 100, "Testing maxOfTwoNumbers(100,100)");
+
 {% endexercise %}
 
 
