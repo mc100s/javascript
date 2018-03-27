@@ -7,31 +7,11 @@ Substration of 2 numbers
 {% initial %}
 // Exercise 1: Substration of 2 numbers
 function subs(a, b) {
-} 
-
-{% solution %}
-function subs(a, b) {
-    return a - b;
-} 
-
-{% validation %}
-assert(subs(42, 38) === 4, "Testing subs(42, 38)");
-assert(subs(38, 42) === -4, "Testing subs(38, 42)");
-assert(subs(100,100) === 0, "Testing subs(100,100)");
-
-{% endexercise %}
-
-<!-- Exercise 2 -->
-{% exercise %}
-Substration of 2 numbers
-
-{% initial %}
-function subs(a, b) {
 
 
 
 
-    
+
 } 
 
 {% solution %}
@@ -50,15 +30,10 @@ assert(subs(100,100) === 0, "Testing subs(100,100)");
 
 <!-- Exercise 2 -->
 {% exercise %}
-Find the maximum
+Find the maximum of 2 numbers
 
 {% initial %}
 function maxOfTwoNumbers(a, b) {
-
-
-
-
-  
 }  
 
 {% solution %}
@@ -75,6 +50,153 @@ function maxOfTwoNumbers(a, b) {
 assert(maxOfTwoNumbers(42, 38) === 42, "Testing maxOfTwoNumbers(42, 38)");
 assert(maxOfTwoNumbers(38, 42) === 42, "Testing maxOfTwoNumbers(38, 42)");
 assert(maxOfTwoNumbers(100,100) === 100, "Testing maxOfTwoNumbers(100,100)");
+
+{% endexercise %}
+
+
+<!-- Exercise 2.1 -->
+{% exercise %}
+Find the maximum of 3 numbers
+
+{% initial %}
+function maxOfThreeNumbers(a, b) {
+}  
+
+{% solution %}
+function maxOfThreeNumbers(a, b) {
+    if (a > b && a > c) {
+        return a;
+    }
+    else if (b > c) {
+        return b;
+    }
+    else {
+        return c;
+    }
+} 
+
+{% validation %}
+assert(maxOfThreeNumbers(42, 38, 12) === 42, "Testing maxOfThreeNumbers(42, 38, 12)");
+assert(maxOfThreeNumbers(38, 42, 12) === 42, "Testing maxOfThreeNumbers(38, 42, 12)");
+assert(maxOfThreeNumbers(12, 38, 42) === 42, "Testing maxOfThreeNumbers(12, 38, 42)");
+
+{% endexercise %}
+
+<!-- Exercise 3 -->
+{% exercise %}
+Find the maximum of a non-empty array
+
+{% initial %}
+function maxOfArray(numbers) {
+}
+
+{% solution %}
+function maxOfArray(numbers) {
+    if (numbers.length === 0) {
+        return null;
+    }
+    var currentMax = numbers[0];
+    for (var i = 1; i < numbers.length; i++) {
+        if (currentMax < numbers[i]) {
+            currentMax = numbers[i];
+        }
+    }
+    return currentMax;
+}
+
+{% validation %}
+assert(maxOfArray([42, 38, 12]) === 42, "Testing maxOfArray([42, 38, 12])");
+assert(maxOfArray([38, 42, 12]) === 42, "Testing maxOfArray([38, 42, 12])");
+assert(maxOfArray([12, 38, 42]) === 42, "Testing maxOfArray([12, 38, 42])");
+
+{% endexercise %}
+
+
+<!-- Exercise  -->
+{% exercise %}
+
+{% initial %}
+
+
+{% solution %}
+
+
+{% validation %}
+assert(maxOfThreeNumbers(42, 38, 12) === 42, "Testing maxOfThreeNumbers(42, 38, 12)");
+assert(maxOfThreeNumbers(38, 42, 12) === 42, "Testing maxOfThreeNumbers(38, 42, 12)");
+assert(maxOfThreeNumbers(12, 38, 42) === 42, "Testing maxOfThreeNumbers(12, 38, 42)");
+
+{% endexercise %}
+
+
+
+<!-- Exercise  -->
+{% exercise %}
+
+{% initial %}
+
+
+{% solution %}
+
+
+{% validation %}
+assert(maxOfThreeNumbers(42, 38, 12) === 42, "Testing maxOfThreeNumbers(42, 38, 12)");
+assert(maxOfThreeNumbers(38, 42, 12) === 42, "Testing maxOfThreeNumbers(38, 42, 12)");
+assert(maxOfThreeNumbers(12, 38, 42) === 42, "Testing maxOfThreeNumbers(12, 38, 42)");
+
+{% endexercise %}
+
+
+
+<!-- Exercise  -->
+{% exercise %}
+
+{% initial %}
+
+
+{% solution %}
+
+
+{% validation %}
+assert(maxOfThreeNumbers(42, 38, 12) === 42, "Testing maxOfThreeNumbers(42, 38, 12)");
+assert(maxOfThreeNumbers(38, 42, 12) === 42, "Testing maxOfThreeNumbers(38, 42, 12)");
+assert(maxOfThreeNumbers(12, 38, 42) === 42, "Testing maxOfThreeNumbers(12, 38, 42)");
+
+{% endexercise %}
+
+
+
+<!-- Exercise  -->
+{% exercise %}
+
+{% initial %}
+
+
+{% solution %}
+
+
+{% validation %}
+assert(maxOfThreeNumbers(42, 38, 12) === 42, "Testing maxOfThreeNumbers(42, 38, 12)");
+assert(maxOfThreeNumbers(38, 42, 12) === 42, "Testing maxOfThreeNumbers(38, 42, 12)");
+assert(maxOfThreeNumbers(12, 38, 42) === 42, "Testing maxOfThreeNumbers(12, 38, 42)");
+
+{% endexercise %}
+
+
+
+<!-- Exercise  -->
+{% exercise %}
+
+{% initial %}
+
+
+{% solution %}
+
+
+{% validation %}
+assert(maxOfThreeNumbers(42, 38, 12) === 42, "Testing maxOfThreeNumbers(42, 38, 12)");
+assert(maxOfThreeNumbers(38, 42, 12) === 42, "Testing maxOfThreeNumbers(38, 42, 12)");
+assert(maxOfThreeNumbers(12, 38, 42) === 42, "Testing maxOfThreeNumbers(12, 38, 42)");
 
 {% endexercise %}
 
