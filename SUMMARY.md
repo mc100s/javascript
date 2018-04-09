@@ -33,6 +33,7 @@
     * [Creation](objects/creation.md)
     * [Properties](objects/properties.md)
     * [Reference (Advanced)](objects/reference.md)
+* [Summary](summary/README.md)
 * [Exercises](exercises/README.md)
     * [All Exercises](exercises/all_exercises.md)
 
