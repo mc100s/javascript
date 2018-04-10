@@ -125,7 +125,7 @@ function sumArray(array) {
 {% solution %}
 function sumArray(array) {
     var curSum = 0;
-    for (var i = 0; i < array; i++) {
+    for (var i = 0; i < array.length; i++) {
         curSum += array[i];
     }
     return curSum;
