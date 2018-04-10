@@ -25,7 +25,6 @@
 * [Loops](loops/README.md)
     * [For](loops/for.md)
     * [While](loops/while.md)
-    * [Do...While](loops/dowhile.md)
 * [Functions](functions/README.md)
     * [Declare](functions/declare.md)
     * [Higher order (Advanced)](functions/higher_order.md)
@@ -35,5 +34,6 @@
     * [Reference (Advanced)](objects/reference.md)
 * [Summary](summary/README.md)
 * [Exercises](exercises/README.md)
+    <!-- TODO: create guided exercises  -->
     * [All Exercises](exercises/all_exercises.md)
 

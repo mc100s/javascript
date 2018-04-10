@@ -15,9 +15,6 @@ array.push(8);
 Add the city "Paris" to cities and sort it
 {% initial %}
 var cities = ["Madrid", "Barcelona", "Miami"];
-
-
-var a =
 {% solution %}
 var cities = ["Madrid", "Barcelona", "Miami"];
 cities.push("Paris");
